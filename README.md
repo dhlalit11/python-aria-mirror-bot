@@ -113,7 +113,7 @@ heroku stack:set container
 ```
 - Add Private Credentials and Config Stuff:
 ```
-git add -f credentials.json token.pickle ./bot/config.ini
+git add -f credentials.json token.pickle config.env heroku.yml authorized_chats.txt ./bot/helper/telegram_helper/bot_commands.py
 ```
 - Commit new changes:
 ```
