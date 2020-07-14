@@ -111,9 +111,9 @@ heroku git:remote -a appname
 ```
 heroku stack:set container
 ```
-- Add Private Credentials and Config Stuff any file's content you chanhe must be mentioned in below command along with path:
+- Add Private Credentials and Config Stuff, any file's content you change must be mentioned in below command along with path:
 ```
-git add -f credentials.json token.pickle config.env aria.sh heroku.yml authorized_chats.txt ./bot/helper/telegram_helper/bot_commands.py
+git add -f credentials.json token.pickle config.env aria.sh heroku.yml authorized_chats.txt /bot/helper/telegram_helper/bot_commands.py bot/modules/mirror.py bot/helper/mirror_utils/upload_utils/gdriveTools.py
 ```
 - Commit new changes:
 ```
