@@ -1,5 +1,5 @@
 # What is this repo about?
-This is a telegram bot writen in python for mirroring files on the internet to our beloved Google Drive.
+This is a telegram bot writen in python by [lzzy12](https://github.com/lzzy12) for mirroring files on the internet to our beloved Google Drive.
 
 # Inspiration 
 This project is heavily inspired from @out386 's telegram bot which is written in JS.
@@ -24,12 +24,12 @@ Deploying is pretty much straight forward and is divided into several steps as f
 
 - Clone this repo:
 ```
-git clone https://github.com/lzzy12/python-aria-mirror-bot mirror-bot/
+git clone https://github.com/dhlalit11/python-aria-mirror-bot mirror-bot/
 cd mirror-bot
 ```
 
 - Install requirements
-For Debian based distros
+For Debian based distros (docker not required for heroku deploy)
 ```
 sudo apt install python3
 sudo snap install docker 
@@ -63,7 +63,7 @@ Fill up rest of the fields. Meaning of each fields are discussed below:
 ```
 python3 generate_string_session.py
 ```
-Note: You can limit maximum concurrent downloads by changing the value of MAX_CONCURRENT_DOWNLOADS in aria.sh. By default, it's set to 2
+Note: You can limit maximum concurrent downloads by changing the value of MAX_CONCURRENT_DOWNLOADS in aria.sh. By default, it's set to 4
  
 ## Getting Google OAuth API credential file
 
@@ -111,9 +111,9 @@ heroku git:remote -a appname
 ```
 heroku stack:set container
 ```
-- Add Private Credentials and Config Stuff:
+- Add Private Credentials and Config Stuff any file's content you chanhe must be mentioned in below command along with path:
 ```
-git add -f credentials.json token.pickle config.env heroku.yml authorized_chats.txt ./bot/helper/telegram_helper/bot_commands.py
+git add -f credentials.json token.pickle config.env aria.sh heroku.yml authorized_chats.txt ./bot/helper/telegram_helper/bot_commands.py
 ```
 - Commit new changes:
 ```
